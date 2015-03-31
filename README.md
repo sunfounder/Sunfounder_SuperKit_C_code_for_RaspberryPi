@@ -1,2 +1,8 @@
-# Sunfounder_SuperKit_C_code_for_RaspberryPi
-Sunfounder super kit C code for Raspberry Pi
+# Sunfounder Super Kit C code for Raspberry Pi
+
+website: 
+	www.sunfounder.com
+
+E-mail:
+	support@sunfounder.com
+
