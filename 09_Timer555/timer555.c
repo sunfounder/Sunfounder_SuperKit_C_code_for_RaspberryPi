@@ -1,3 +1,11 @@
+/**********************************************************************
+* Filename    : timer555.c
+* Description : Count the pluses procude by NE555.
+* Author      : Robot
+* E-mail      : support@sunfounder.com
+* website     : www.sunfounder.com
+* Date        : 2014/08/27
+**********************************************************************/
 #include <stdio.h>
 #include <string.h>
 #include <errno.h>

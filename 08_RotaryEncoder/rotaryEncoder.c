@@ -1,3 +1,11 @@
+/**********************************************************************
+* Filename    : rotaryEncoder.c
+* Description : make a rotaryEncoder work.
+* Author      : Robot
+* E-mail      : support@sunfounder.com
+* website     : www.sunfounder.com
+* Date        : 2014/08/27
+**********************************************************************/
 #include <stdio.h>
 #include <string.h>
 #include <errno.h>
