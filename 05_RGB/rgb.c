@@ -1,6 +1,6 @@
 /**********************************************************************
 * Filename    : rgb.c
-* Description : Controlling an led by button.
+* Description : Make a rgb led emits a various color.
 * Author      : Robot
 * E-mail      : support@sunfounder.com
 * website     : www.sunfounder.com
