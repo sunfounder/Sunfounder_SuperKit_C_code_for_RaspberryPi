@@ -1,6 +1,6 @@
 /**********************************************************************
 * Filename    : beep.c
-* Description : Controlling an led by button.
+* Description : make a buzzer sound.
 * Author      : Robot
 * E-mail      : support@sunfounder.com
 * website     : www.sunfounder.com
