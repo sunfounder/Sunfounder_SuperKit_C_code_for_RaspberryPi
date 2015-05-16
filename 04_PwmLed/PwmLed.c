@@ -1,6 +1,6 @@
 /**********************************************************************
 * Filename    : pwmLed.c
-* Description : Controlling an led by button.
+* Description : Make a breathing led.
 * Author      : Robot
 * E-mail      : support@sunfounder.com
 * website     : www.sunfounder.com
