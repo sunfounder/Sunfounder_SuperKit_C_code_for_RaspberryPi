@@ -6,13 +6,13 @@ SunFounder is a technology company focused on Raspberry Pi and Arduino open sour
 2016/02/03 updated
 change lesson 13 pin connection to:
 
- -D4---GPIO6
- -D5---GPIO5
- -D6---GPIO4
- -D7---GPIO1
- -RS---GPIO2
- -RW---GND
- -CE---GPIO3
+ - D4---GPIO6
+ - D5---GPIO5
+ - D6---GPIO4
+ - D7---GPIO1
+ - RS---GPIO2
+ - RW---GND
+ - CE---GPIO3
 
 website: 
 	www.sunfounder.com
