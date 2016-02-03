@@ -10,12 +10,12 @@ int main(void)
 {
 	int fd;
 	int i;
-	
-	if(wiringPiSetup() == -1){
+	if (wiringPiSetup() == -1){
 		exit(1);
 	}
-	
-	fd = lcdInit(2,16,4, 15,16,  0,1,2,3,4,5,6,7); //see /usr/local/include/lcd.h
+
+	fd = lcdInit(2,16,4, 2,3, 6,5,4,1,0,0,0,0); //see /usr/local/include/lcd.h
+	printf("%d", fd);
 	if (fd == -1){
 		printf("lcdInit 1 failed\n") ;
 		return 1;
@@ -30,8 +30,8 @@ int main(void)
 	lcdPuts(fd, "  sunfounder.com");
 
 	sleep(1);
-//	lcdClear(fd);
-	
+	lcdClear(fd);
+
 	while(1){
 		for(i=0;i<sizeof(Buf)-1;i++){
 			lcdPosition(fd, i, 1);
