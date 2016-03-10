@@ -35,9 +35,7 @@ int main(void)
 		}
 
 		digitalWrite(MotorEnable, LOW);
-		for(i=0;i<3;i++){
 			delay(1000);
-		}
 
 		digitalWrite(MotorEnable, HIGH);
 		digitalWrite(MotorPin1, LOW);
@@ -45,8 +43,11 @@ int main(void)
 		for(i=0;i<3;i++){
 			delay(1000);
 		}
+
+		digitalWrite(MotorEnable, LOW);
+                        delay(1000);
+
 	}
 
 	return 0;
 }
-
