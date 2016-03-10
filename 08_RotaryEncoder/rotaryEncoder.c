@@ -14,6 +14,7 @@
 
 #define  RoAPin    0
 #define  RoBPin    1
+#define  RoSPin    2
 
 static volatile int globalCounter = 0 ;
 
@@ -33,11 +34,24 @@ void rotaryDeal(void)
 	if(flag == 1){
 		flag = 0;
 		if((Last_RoB_Status == 0)&&(Current_RoB_Status == 1)){
-			globalCounter ++;	
+			globalCounter ++;
+			printf("globalCounter : %d\n",globalCounter);
 		}
 		if((Last_RoB_Status == 1)&&(Current_RoB_Status == 0)){
 			globalCounter --;
+			printf("globalCounter : %d\n",globalCounter);
 		}
+
+	}
+}
+
+void rotaryClear(void)
+{
+	if(digitalRead(RoSPin) == 0)
+	{
+		globalCounter = 0;
+		printf("globalCounter : %d\n",globalCounter);
+		delay(1000);
 	}
 }
 
@@ -50,10 +64,13 @@ int main(void)
 
 	pinMode(RoAPin, INPUT);
 	pinMode(RoBPin, INPUT);
+	pinMode(RoSPin, INPUT);
+
+	pullUpDnControl(RoSPin, PUD_UP);
 
 	while(1){
 		rotaryDeal();
-		printf("globalCounter : %d\n",globalCounter);
+		rotaryClear();
 	}
 
 	return 0;
