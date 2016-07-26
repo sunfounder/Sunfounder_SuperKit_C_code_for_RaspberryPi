@@ -36,8 +36,7 @@ int main(void)
 			delay(100);
 			led_off(i);
 		}
-	//	delay(500);
-		for(i=8;i>=0;i--){  //make led off from right to left
+		for(i=7;i>=0;i--){  //make led off from right to left
 			led_on(i);
 			delay(100);
 			led_off(i);
