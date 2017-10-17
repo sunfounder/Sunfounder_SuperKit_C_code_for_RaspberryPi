@@ -22,7 +22,7 @@ int main(void)
 		return 1;
 	}
 
-	softPwmCreate(LedPin, 0, 100);//pwm output mode
+	softPwmCreate(LedPin, 0, 100);
 
 	while(1){
 		for(i=0;i<=100;i++){
