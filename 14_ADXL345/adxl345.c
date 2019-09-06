@@ -1,3 +1,11 @@
+/**********************************************************************
+* Filename    : adxl345.c
+* Description : Use an adxl345
+* Author      : Robot
+* E-mail      : support@sunfounder.com
+* website     : www.sunfounder.com
+* Update      : Cavon    2016/07/01
+**********************************************************************/
 #include <wiringPiI2C.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -49,9 +57,23 @@ struct acc_dat adxl345_read_xyz(int fd)
 	z0 = 0xff - wiringPiI2CReadReg8(fd, 0x36);
 	z1 = 0xff - wiringPiI2CReadReg8(fd, 0x37);
 
+	printf("  x0 = %d   ",x0);printf("x1 = %d  \n",x1);
+	printf("  y0 = %d   ",y0);printf("y1 = %d  \n",y1);
+	printf("  z0 = %d   ",z0);printf("z1 = %d  \n",z1);
+
 	acc_xyz.x = (int)(x1 << 8) + (int)x0;
 	acc_xyz.y = (int)(y1 << 8) + (int)y0;
 	acc_xyz.z = (int)(z1 << 8) + (int)z0;
+
+	if(acc_xyz.x > 32767){
+		acc_xyz.x -= 65536;	    
+	}
+	if(acc_xyz.y > 32767){
+		acc_xyz.y -= 65536;	    
+	}
+	if(acc_xyz.z > 32767){
+	    acc_xyz.z -= 65536;	
+	}
 
 	return acc_xyz;
 }
@@ -71,8 +93,7 @@ int main(void)
 
 	while(1){
 		acc_xyz = adxl345_read_xyz(fd);
-		printf("x: %05d  y: %05d  z: %05d\n", acc_xyz.x, acc_xyz.y, acc_xyz.z);
-		
+		printf("x: %d  y: %d  z: %d\n", acc_xyz.x, acc_xyz.y, acc_xyz.z);
 		delay(1000);
 	}
 	

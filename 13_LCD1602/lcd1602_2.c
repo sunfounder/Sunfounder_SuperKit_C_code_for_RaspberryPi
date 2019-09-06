@@ -20,7 +20,7 @@ int main(void)
 		printf("lcdInit 1 failed\n") ;
 		return 1;
 	}
-	sleep(1);
+	delay(1000);
 
 	lcdClear(fd);
 	lcdPosition(fd, 0, 0); 
@@ -29,7 +29,7 @@ int main(void)
 	lcdPosition(fd, 0, 1); 
 	lcdPuts(fd, "  sunfounder.com");
 
-	sleep(1);
+	delay(1000);
 	lcdClear(fd);
 
 	while(1){
@@ -40,7 +40,7 @@ int main(void)
 		}
 		lcdPosition(fd, 0, 1); 
 		lcdClear(fd);
-		sleep(0.5);
+		delay(500);
 		for(i=0; i<16; i++){
 			lcdPosition(fd, i, 0);
 			lcdPutchar(fd, *(myBuf+i));
