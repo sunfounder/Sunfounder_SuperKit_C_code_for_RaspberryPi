@@ -12,6 +12,15 @@ E-mail:
 ### Customer's idea:
  - [**pimorse**](https://github.com/gabolander/pimorse) Raspberry Pi Morse code generater from [Gabriele Zappi](https://github.com/gabolander) Run command `git submodule update --init` to clone the pymorse submodule, or else, it will be empty.
 
+2019/09/06 updated
+Summary:
+delete 11_Segment/segment2.c
+delete 05_RGB/.rgb.c.swo
+delete 04_PwmLed/PwmLed.old.c
+delete 03_8Led/CmdCtrlLed.c
+delete 02_BtnAndLed/BtnAndLed
+fix the bug in 14_ADXL345/adxl345.c
+fix the bug in 13_LCD1602/lcd1602_2.c
 
 2016/02/03 updated
 change lesson 13 pin connection to:
