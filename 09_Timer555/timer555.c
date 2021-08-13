@@ -30,8 +30,9 @@ int main (void)
 
   wiringPiISR(Pin0, INT_EDGE_FALLING, &exInt0_ISR);
 
-   while(1){
-	printf("Current pluse number is : %d\n", globalCounter);
+  while(1){
+	  printf("Current pluse number is : %d\n", globalCounter);
+    delay(100);
   }
 
   return 0;

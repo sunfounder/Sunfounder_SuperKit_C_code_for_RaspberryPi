@@ -7,6 +7,7 @@
 * Update      : Cavon    2016/07/01
 **********************************************************************/
 #include <wiringPiI2C.h>
+#include <wiringPi.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
